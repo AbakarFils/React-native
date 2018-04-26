@@ -1,11 +1,18 @@
 import React from 'react'
-import {View,Text,StyleSheet} from 'react-native'
+import {View,Text,StyleSheet, Image} from 'react-native'
+import { height } from 'window-size';
 // ****************************************************************************
 // *                                commentaire                               *
 // ****************************************************************************
 
 export default class About extends React.Component
 {
+    static navigationOptions= {
+        tabBarIcon :() => {
+            return <Image source={require('./icons/user.png')} style={{ width: 20, height: 20}} />
+        }
+    }
+
     render(){
         return (
         <View style ={style.view}>

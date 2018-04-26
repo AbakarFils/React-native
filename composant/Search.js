@@ -1,5 +1,5 @@
 import React from 'react'
-import {TextInput} from 'react-native'
+import {TextInput, Image} from 'react-native'
 // ****************************************************************************
 // *       pardefaut on a Dakar dans le champs du TextInput mais quand        *
 // *             on va changer le texte avec la fonction onchangetext on va lancer *
@@ -8,6 +8,12 @@ import {TextInput} from 'react-native'
 // ****************************************************************************
 //
 export default class Home extends React.componets{
+    
+    static navigationOptions = {
+        tabBarIcon: () => {
+            return <Image source={require('./icons/home.png')} style={{ width: 20, height: 20 }} />
+        }
+    }
 
     constructor(props)
     {
